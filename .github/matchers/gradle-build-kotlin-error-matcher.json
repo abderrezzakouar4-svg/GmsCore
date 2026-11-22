@@ -3,9 +3,10 @@
     {
       "owner": "gradle-build-kotlin-error-matcher",
       "severity": "error",
+      "fileLocation": "absolute",
       "pattern": [
         {
-          "regexp": "^e:\\sfile:\/\/([^:]+):(\\d+):(\\d+)\\s(.+)$",
+          "regexp": "^e:\\s+(?:file://)?(.+?):(\\d+):(\\d+)\\s+(.+)$",
           "file": 1,
           "line": 2,
           "column": 3,
@@ -15,3 +16,4 @@
     }
   ]
 }
+
