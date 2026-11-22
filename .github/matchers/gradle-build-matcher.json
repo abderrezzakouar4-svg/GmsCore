@@ -1,14 +1,30 @@
+
 {
   "problemMatcher": [
     {
-      "owner": "gradle-build-matcher",
+      "owner": "gradle-kotlin-matcher",
+      "severity": "error",
+      "fileLocation": "absolute",
       "pattern": [
         {
-          "regexp": "^\\s*([^:]+):(\\d+):\\s(error|Error):\\s(.+)$",
+          "regexp": "^e:\\s+(?:file:///)?(.+?):(\\d+):(\\d+)\\s+(.+)$",
           "file": 1,
           "line": 2,
-          "severity": 3,
+          "column": 3,
           "message": 4
+        }
+      ]
+    },
+    {
+      "owner": "gradle-java-matcher",
+      "severity": "error",
+      "fileLocation": "absolute",
+      "pattern": [
+        {
+          "regexp": "^\\s*(.+?):(\\d+):\\s+[Ee]rror:\\s+(.+)$",
+          "file": 1,
+          "line": 2,
+          "message": 3
         }
       ]
     }
